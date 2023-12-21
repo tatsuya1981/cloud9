@@ -2,6 +2,12 @@ source "https://rubygems.org"
 
 ruby "3.2.1"
 
+gem "importmap-rails" #ESMとimportmapを使用して、トランスパイルやバンドルなしでRailsのモダンなJavaScriptを管理
+
+gem "turbo-rails" #JavaScriptを一切記述することなく、シングルページのWebアプリケーションのようなスピードを実現
+
+gem "stimulus-rails" #あなたがすでに持っているHTMLのための控えめなJavaScriptフレームワーク
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
 

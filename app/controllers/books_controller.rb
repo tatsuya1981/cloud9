@@ -30,9 +30,15 @@ class BooksController < ApplicationController
         @book = Book.find(params[:id])
         book_params = params.require(:book).permit(:year, :month, :inout, :category, :amount)
         if @book.update(book_params)
-            redirect_to book_path
+            redirect_to books_path
         else
             render :edit
         end
+    end
+    
+    def destroy
+        @book = Book.find(params[:id])
+        @book.destroy
+        redirect_to books_path
     end
 end
